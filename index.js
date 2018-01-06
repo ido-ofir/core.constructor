@@ -355,7 +355,7 @@ Core.prototype = {
                 core.plugin(def, done);
             });
         }
-        if(!type !== 'object'){ throw new Error(`cannot create plugin from "${type}"`); }
+        if(type !== 'object'){ throw new Error(`cannot create plugin from "${type}"`); }
         if (!definition.name) { throw new Error(`a plugin's name is missing in Object ${ Object.keys(definition) }`); }
         
         core.definitions[definition.name] = definition;
