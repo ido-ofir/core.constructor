@@ -1,18 +1,17 @@
 {
-  "name": "core.constructor",
-  "version": "1.0.2",
-  "description": "a constructor for a bare skeleton that can be extended by plugins",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "core",
-    "constructor",
-    "skeleton",
-    "plugin"
-  ],
-  "author": "ido-ofir",
-  "license": "ISC"
+    "name": "core.constructor",
+    "version": "1.0.3",
+    "description": "a constructor for a bare skeleton that can be extended by plugins",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "core",
+        "constructor",
+        "skeleton",
+        "plugin"
+    ],
+    "author": "ido-ofir",
+    "license": "ISC"
 }
-  

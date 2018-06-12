@@ -30,7 +30,6 @@ function Core(options) {
     var core = this;
     if(!options) options = {};
     core.name = options.name || 'core';
-    core.definitions = {};
     core.plugins = {};
     core.constructor = Core;
     core.core = core;
@@ -357,8 +356,6 @@ Core.prototype = {
         }
         if(type !== 'object'){ throw new Error(`cannot create plugin from "${type}"`); }
         if (!definition.name) { throw new Error(`a plugin's name is missing in Object ${ Object.keys(definition) }`); }
-        
-        core.definitions[definition.name] = definition;
         
         core.fire('core.pluginDefinition', definition, () => {
             var isDone = false;
