@@ -353,10 +353,16 @@ Core.prototype = {
      * @param {function} callback - A function that will be called when the job completes.
      * @return {undefined}
      * @example
-     * core.plugin('myPlugin', {
-     *     getData(){ return 47; }
+     * core.plugin({
+     *     name: 'myPlugin',
+     *     extend: {
+     *         getData(){ return core.plugins.myPlugin.data; }
+     *     },
+     *     init(def, done){
+     *         done({ data: 47 })
+     *     }
      * });
-     * core.plugins.myPlugin.getData();  // 47.
+     * core.getData();  // 47.
      * */ 
     plugin(definition, callback) {
         var i, core = this;

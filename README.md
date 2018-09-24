@@ -354,10 +354,16 @@ Adds a plugin to core instance.
 
 **Example**  
 ```js
-core.plugin('myPlugin', {
-    getData(){ return 47; }
+core.plugin({
+    name: 'myPlugin',
+    extend: {
+        getData(){ return core.plugins.myPlugin.data; }
+    },
+    init(def, done){
+        done({ data: 47 })
+    }
 });
-core.plugins.myPlugin.getData();  // 47.
+core.getData();  // 47.
 ```
 <a name="Core.channels
 A namespace object to hold named channels."></a>
