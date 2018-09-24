@@ -1,19 +1,3 @@
-## Classes
-
-<dl>
-<dt><a href="#Core">Core</a></dt>
-<dd></dd>
-</dl>
-
-## Members
-
-<dl>
-<dt><a href="#Core+channels
-A namespace object to hold named channels.">Core#channels
-A namespace object to hold named channels.</a></dt>
-<dd></dd>
-</dl>
-
 <a name="Core"></a>
 
 ## Core
@@ -365,9 +349,3 @@ core.plugin({
 });
 core.getData();  // 47.
 ```
-<a name="Core+channels
-A namespace object to hold named channels."></a>
-
-## Core#channels
-A namespace object to hold named channels.
-**Kind**: global variable  

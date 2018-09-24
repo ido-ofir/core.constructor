@@ -228,11 +228,6 @@ Core.prototype = {
             return property;
         });
     },
-
-    /**
-     * @name Core#channels
-     * A namespace object to hold named channels.
-     */
     channels: {
         'core.pluginDefinition': [],
         'core.plugin': []
