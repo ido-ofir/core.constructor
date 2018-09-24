@@ -8,8 +8,8 @@
 ## Members
 
 <dl>
-<dt><a href="#Core.channels
-A namespace object to hold named channels.">Core.channels
+<dt><a href="#Core+channels
+A namespace object to hold named channels.">Core#channels
 A namespace object to hold named channels.</a></dt>
 <dd></dd>
 </dl>
@@ -21,22 +21,22 @@ A namespace object to hold named channels.</a></dt>
 
 * [Core](#Core)
     * [new Core(options)](#new_Core_new)
-    * [.typeOf(thing)](#Core.typeOf) ⇒ <code>string</code>
-    * [.isUndefined(thing)](#Core.isUndefined) ⇒ <code>boolean</code>
-    * [.isNull(thing)](#Core.isNull) ⇒ <code>boolean</code>
-    * [.isBoolean(thing)](#Core.isBoolean) ⇒ <code>boolean</code>
-    * [.isNumber(thing)](#Core.isNumber) ⇒ <code>boolean</code>
-    * [.isString(thing)](#Core.isString) ⇒ <code>boolean</code>
-    * [.isDate(thing)](#Core.isDate) ⇒ <code>boolean</code>
-    * [.isArray(thing)](#Core.isArray) ⇒ <code>boolean</code>
-    * [.isObject(thing)](#Core.isObject) ⇒ <code>boolean</code>
-    * [.isFunction(thing)](#Core.isFunction) ⇒ <code>boolean</code>
-    * [.assign(target, source, assignFunc)](#Core.assign) ⇒ <code>object</code>
-    * [.extend(properties)](#Core.extend) ⇒ <code>object</code>
-    * [.channel(name, array)](#Core.channel) ⇒ <code>undefined</code>
-    * [.tap(name, func)](#Core.tap) ⇒ <code>undefined</code>
-    * [.fire(name, data, callback)](#Core.fire) ⇒ <code>undefined</code>
-    * [.plugin(definition, callback)](#Core.plugin) ⇒ <code>undefined</code>
+    * [.typeOf(thing)](#Core+typeOf) ⇒ <code>string</code>
+    * [.isUndefined(thing)](#Core+isUndefined) ⇒ <code>boolean</code>
+    * [.isNull(thing)](#Core+isNull) ⇒ <code>boolean</code>
+    * [.isBoolean(thing)](#Core+isBoolean) ⇒ <code>boolean</code>
+    * [.isNumber(thing)](#Core+isNumber) ⇒ <code>boolean</code>
+    * [.isString(thing)](#Core+isString) ⇒ <code>boolean</code>
+    * [.isDate(thing)](#Core+isDate) ⇒ <code>boolean</code>
+    * [.isArray(thing)](#Core+isArray) ⇒ <code>boolean</code>
+    * [.isObject(thing)](#Core+isObject) ⇒ <code>boolean</code>
+    * [.isFunction(thing)](#Core+isFunction) ⇒ <code>boolean</code>
+    * [.assign(target, source, assignFunc)](#Core+assign) ⇒ <code>object</code>
+    * [.extend(properties)](#Core+extend) ⇒ <code>object</code>
+    * [.channel(name, array)](#Core+channel) ⇒ <code>undefined</code>
+    * [.tap(name, func)](#Core+tap) ⇒ <code>undefined</code>
+    * [.fire(name, data, callback)](#Core+fire) ⇒ <code>undefined</code>
+    * [.plugin(definition, callback)](#Core+plugin) ⇒ <code>undefined</code>
 
 <a name="new_Core_new"></a>
 
@@ -62,12 +62,12 @@ var core = new Core({
     }
 });
 ```
-<a name="Core.typeOf"></a>
+<a name="Core+typeOf"></a>
 
-### Core.typeOf(thing) ⇒ <code>string</code>
+### core.typeOf(thing) ⇒ <code>string</code>
 Returns the correct native type in javascript ( unlike the 'typeof' operator ).
 
-**Kind**: static method of [<code>Core</code>](#Core)  
+**Kind**: instance method of [<code>Core</code>](#Core)  
 **Returns**: <code>string</code> - The native javascript type - 'undefined', 'null', 'boolean', 'number', 'string', 'array', 'object' or 'function'.  
 
 | Param | Type | Description |
@@ -82,12 +82,12 @@ typeof []; // 'object'
 core.typeOf(null); // 'null'
 core.typeOf([]); // 'array'
 ```
-<a name="Core.isUndefined"></a>
+<a name="Core+isUndefined"></a>
 
-### Core.isUndefined(thing) ⇒ <code>boolean</code>
+### core.isUndefined(thing) ⇒ <code>boolean</code>
 Checks if a value is undefined.
 
-**Kind**: static method of [<code>Core</code>](#Core)  
+**Kind**: instance method of [<code>Core</code>](#Core)  
 **Returns**: <code>boolean</code> - - true if 'thing' is undefined. false otherwise.  
 
 | Param | Type | Description |
@@ -98,12 +98,12 @@ Checks if a value is undefined.
 ```js
 core.isUndefined(null); // false
 ```
-<a name="Core.isNull"></a>
+<a name="Core+isNull"></a>
 
-### Core.isNull(thing) ⇒ <code>boolean</code>
+### core.isNull(thing) ⇒ <code>boolean</code>
 Checks if a value is null.
 
-**Kind**: static method of [<code>Core</code>](#Core)  
+**Kind**: instance method of [<code>Core</code>](#Core)  
 **Returns**: <code>boolean</code> - - true if 'thing' is null. false otherwise.  
 
 | Param | Type | Description |
@@ -114,12 +114,12 @@ Checks if a value is null.
 ```js
 core.isNull(null); // true
 ```
-<a name="Core.isBoolean"></a>
+<a name="Core+isBoolean"></a>
 
-### Core.isBoolean(thing) ⇒ <code>boolean</code>
+### core.isBoolean(thing) ⇒ <code>boolean</code>
 Checks if a value is a boolean.
 
-**Kind**: static method of [<code>Core</code>](#Core)  
+**Kind**: instance method of [<code>Core</code>](#Core)  
 **Returns**: <code>boolean</code> - - true if 'thing' is boolean. false otherwise.  
 
 | Param | Type | Description |
@@ -131,12 +131,12 @@ Checks if a value is a boolean.
 core.isBoolean(false); // true
 core.isBoolean(''); // false
 ```
-<a name="Core.isNumber"></a>
+<a name="Core+isNumber"></a>
 
-### Core.isNumber(thing) ⇒ <code>boolean</code>
+### core.isNumber(thing) ⇒ <code>boolean</code>
 Checks if a value is a number.
 
-**Kind**: static method of [<code>Core</code>](#Core)  
+**Kind**: instance method of [<code>Core</code>](#Core)  
 **Returns**: <code>boolean</code> - - true if 'thing' is a number. false otherwise.  
 
 | Param | Type | Description |
@@ -148,12 +148,12 @@ Checks if a value is a number.
 core.isNumber('35'); // false
 core.isNumber(35); // true
 ```
-<a name="Core.isString"></a>
+<a name="Core+isString"></a>
 
-### Core.isString(thing) ⇒ <code>boolean</code>
+### core.isString(thing) ⇒ <code>boolean</code>
 Checks if a value is a string.
 
-**Kind**: static method of [<code>Core</code>](#Core)  
+**Kind**: instance method of [<code>Core</code>](#Core)  
 **Returns**: <code>boolean</code> - - true if 'thing' is a string. false otherwise.  
 
 | Param | Type | Description |
@@ -165,12 +165,12 @@ Checks if a value is a string.
 core.isString('35'); // true
 core.isString(35); // false
 ```
-<a name="Core.isDate"></a>
+<a name="Core+isDate"></a>
 
-### Core.isDate(thing) ⇒ <code>boolean</code>
+### core.isDate(thing) ⇒ <code>boolean</code>
 Checks if a value is a date object.
 
-**Kind**: static method of [<code>Core</code>](#Core)  
+**Kind**: instance method of [<code>Core</code>](#Core)  
 **Returns**: <code>boolean</code> - - true if 'thing' is an array. false otherwise.  
 
 | Param | Type | Description |
@@ -182,12 +182,12 @@ Checks if a value is a date object.
 core.isDate('6/3/81'); // false
 core.isDate(new Date('6/3/81')); // true
 ```
-<a name="Core.isArray"></a>
+<a name="Core+isArray"></a>
 
-### Core.isArray(thing) ⇒ <code>boolean</code>
+### core.isArray(thing) ⇒ <code>boolean</code>
 Checks if a value is an array.
 
-**Kind**: static method of [<code>Core</code>](#Core)  
+**Kind**: instance method of [<code>Core</code>](#Core)  
 **Returns**: <code>boolean</code> - - true if 'thing' is an array. false otherwise.  
 
 | Param | Type | Description |
@@ -199,12 +199,12 @@ Checks if a value is an array.
 core.isArray({}); // false
 core.isArray([]); // true
 ```
-<a name="Core.isObject"></a>
+<a name="Core+isObject"></a>
 
-### Core.isObject(thing) ⇒ <code>boolean</code>
+### core.isObject(thing) ⇒ <code>boolean</code>
 Checks if a value is an object.
 
-**Kind**: static method of [<code>Core</code>](#Core)  
+**Kind**: instance method of [<code>Core</code>](#Core)  
 **Returns**: <code>boolean</code> - - true if 'thing' is an object. false otherwise.  
 
 | Param | Type | Description |
@@ -216,12 +216,12 @@ Checks if a value is an object.
 core.isObject({}); // true
 core.isObject([]); // false
 ```
-<a name="Core.isFunction"></a>
+<a name="Core+isFunction"></a>
 
-### Core.isFunction(thing) ⇒ <code>boolean</code>
+### core.isFunction(thing) ⇒ <code>boolean</code>
 Checks if a value is a function.
 
-**Kind**: static method of [<code>Core</code>](#Core)  
+**Kind**: instance method of [<code>Core</code>](#Core)  
 **Returns**: <code>boolean</code> - - true if 'thing' is a function. false otherwise.  
 
 | Param | Type | Description |
@@ -233,12 +233,12 @@ Checks if a value is a function.
 core.isFunction({}); // false
 core.isFunction(e => {}); // true
 ```
-<a name="Core.assign"></a>
+<a name="Core+assign"></a>
 
-### Core.assign(target, source, assignFunc) ⇒ <code>object</code>
+### core.assign(target, source, assignFunc) ⇒ <code>object</code>
 Copies all properties from 'source' to 'target', similar to Object.assign.
 
-**Kind**: static method of [<code>Core</code>](#Core)  
+**Kind**: instance method of [<code>Core</code>](#Core)  
 **Returns**: <code>object</code> - - The target object ( the first parameter ).  
 
 | Param | Type | Description |
@@ -251,12 +251,12 @@ Copies all properties from 'source' to 'target', similar to Object.assign.
 ```js
 core.assign({}, {a: 1, b: 2}, (property, key, source) => property + 1);   // { a: 2, b: 3 }
 ```
-<a name="Core.extend"></a>
+<a name="Core+extend"></a>
 
-### Core.extend(properties) ⇒ <code>object</code>
+### core.extend(properties) ⇒ <code>object</code>
 Copies all members in 'properties' to the core instance.
 
-**Kind**: static method of [<code>Core</code>](#Core)  
+**Kind**: instance method of [<code>Core</code>](#Core)  
 **Returns**: <code>object</code> - - Returns the target object ( the first parameter ).  
 
 | Param | Type | Description |
@@ -273,12 +273,12 @@ core.extend({
 core.getData();  // 45.
 core.myData;  // 45.
 ```
-<a name="Core.channel"></a>
+<a name="Core+channel"></a>
 
-### Core.channel(name, array) ⇒ <code>undefined</code>
+### core.channel(name, array) ⇒ <code>undefined</code>
 Adds a new channel to the channels namespace object.
 
-**Kind**: static method of [<code>Core</code>](#Core)  
+**Kind**: instance method of [<code>Core</code>](#Core)  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -290,12 +290,12 @@ Adds a new channel to the channels namespace object.
 core.channel('collection');
 core.channels.collection; // [].
 ```
-<a name="Core.tap"></a>
+<a name="Core+tap"></a>
 
-### Core.tap(name, func) ⇒ <code>undefined</code>
+### core.tap(name, func) ⇒ <code>undefined</code>
 tap to a channel.
 
-**Kind**: static method of [<code>Core</code>](#Core)  
+**Kind**: instance method of [<code>Core</code>](#Core)  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -315,12 +315,12 @@ core.fire('dataType', {}, (dataType) => {
     dataType.test; // 'ok'
 });
 ```
-<a name="Core.fire"></a>
+<a name="Core+fire"></a>
 
-### Core.fire(name, data, callback) ⇒ <code>undefined</code>
+### core.fire(name, data, callback) ⇒ <code>undefined</code>
 Runs data through a named channel.
 
-**Kind**: static method of [<code>Core</code>](#Core)  
+**Kind**: instance method of [<code>Core</code>](#Core)  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -339,12 +339,12 @@ core.fire('dataType', {}, (dataType) => {
     dataType.test; // 'ok'
 });
 ```
-<a name="Core.plugin"></a>
+<a name="Core+plugin"></a>
 
-### Core.plugin(definition, callback) ⇒ <code>undefined</code>
+### core.plugin(definition, callback) ⇒ <code>undefined</code>
 Adds a plugin to core instance.
 
-**Kind**: static method of [<code>Core</code>](#Core)  
+**Kind**: instance method of [<code>Core</code>](#Core)  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -365,9 +365,9 @@ core.plugin({
 });
 core.getData();  // 47.
 ```
-<a name="Core.channels
+<a name="Core+channels
 A namespace object to hold named channels."></a>
 
-## Core.channels
+## Core#channels
 A namespace object to hold named channels.
 **Kind**: global variable  

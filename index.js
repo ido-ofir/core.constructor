@@ -44,7 +44,7 @@ function Core(options) {
 
 Core.prototype = {
     /** 
-     * @name Core.typeOf
+     * @name Core#typeOf
      * @function
      * @description Returns the correct native type in javascript ( unlike the 'typeof' operator ).
      * @param {any} thing - anything you want. 
@@ -61,7 +61,7 @@ Core.prototype = {
     typeOf: typeOf,
 
     /** 
-     * @name Core.isUndefined
+     * @name Core#isUndefined
      * @function
      * @description Checks if a value is undefined.
      * @param {any} thing - anything you want. 
@@ -72,7 +72,7 @@ Core.prototype = {
     isUndefined(v){ return typeOf(v) === 'undefined'; },
 
     /** 
-     * @name Core.isNull
+     * @name Core#isNull
      * @function
      * @description Checks if a value is null.
      * @param {any} thing - anything you want. 
@@ -83,7 +83,7 @@ Core.prototype = {
     isNull(v){ return typeOf(v) === 'null'; },
 
     /** 
-     * @name Core.isBoolean
+     * @name Core#isBoolean
      * @function
      * @description Checks if a value is a boolean.
      * @param {any} thing - anything you want. 
@@ -95,7 +95,7 @@ Core.prototype = {
     isBoolean(v){ return typeOf(v) === 'boolean'; },
 
     /** 
-     * @name Core.isNumber
+     * @name Core#isNumber
      * @function
      * @description Checks if a value is a number.
      * @param {any} thing - anything you want. 
@@ -107,7 +107,7 @@ Core.prototype = {
     isNumber(v){ return typeOf(v) === 'number'; },
 
     /** 
-     * @name Core.isString
+     * @name Core#isString
      * @function
      * @description Checks if a value is a string.
      * @param {any} thing - anything you want. 
@@ -119,7 +119,7 @@ Core.prototype = {
     isString(v){ return typeOf(v) === 'string'; },
 
     /** 
-     * @name Core.isDate
+     * @name Core#isDate
      * @function
      * @description Checks if a value is a date object.
      * @param {any} thing - anything you want. 
@@ -133,7 +133,7 @@ Core.prototype = {
     isDate(v){ return typeOf(v) === 'date'; },
 
     /** 
-     * @name Core.isArray
+     * @name Core#isArray
      * @function
      * @description Checks if a value is an array.
      * @param {any} thing - anything you want. 
@@ -145,7 +145,7 @@ Core.prototype = {
     isArray(v){ return typeOf(v) === 'array'; },
 
     /** 
-     * @name Core.isObject
+     * @name Core#isObject
      * @function
      * @description Checks if a value is an object.
      * @param {any} thing - anything you want. 
@@ -157,7 +157,7 @@ Core.prototype = {
     isObject(v){ return typeOf(v) === 'object'; },
 
     /** 
-     * @name Core.isFunction
+     * @name Core#isFunction
      * @function
      * @description Checks if a value is a function.
      * @param {any} thing - anything you want. 
@@ -169,7 +169,7 @@ Core.prototype = {
     isFunction(v){ return typeOf(v) === 'function'; },
 
     /** 
-     * @name Core.assign
+     * @name Core#assign
      * @function
      * @description Copies all properties from 'source' to 'target', similar to Object.assign.
      * @param {object} target - The target object. properties will be copied to this object.
@@ -200,7 +200,7 @@ Core.prototype = {
     },
 
     /** 
-     * @name Core.extend
+     * @name Core#extend
      * @function
      * @description Copies all members in 'properties' to the core instance.
      * @param {object} properties - An 
@@ -230,7 +230,7 @@ Core.prototype = {
     },
 
     /**
-     * @name Core.channels
+     * @name Core#channels
      * A namespace object to hold named channels.
      */
     channels: {
@@ -239,7 +239,7 @@ Core.prototype = {
     },
 
     /** 
-     * @name Core.channel
+     * @name Core#channel
      * @function
      * @description Adds a new channel to the channels namespace object.
      * @param {string} name - The name of the channel.
@@ -260,7 +260,7 @@ Core.prototype = {
     },
 
     /** 
-     * @name Core.tap
+     * @name Core#tap
      * @function
      * @description tap to a channel.
      * @param {string} name - The name of the channel.
@@ -287,7 +287,7 @@ Core.prototype = {
     },
 
     /** 
-     * @name Core.fire
+     * @name Core#fire
      * @function
      * @description Runs data through a named channel.
      * @param {string} name - The name of the channel.
@@ -345,7 +345,7 @@ Core.prototype = {
     },
 
     /** 
-     * @name Core.plugin
+     * @name Core#plugin
      * @function
      * @description Adds a plugin to core instance.
      * @param {object} definition - The plugin definition.
