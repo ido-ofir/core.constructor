@@ -362,6 +362,10 @@ Core.prototype = {
     plugin(definition, callback) {
         var i, core = this;
         var type = core.typeOf(definition);
+        if(type === 'function'){ 
+            // if it's a function, just call it
+            return core.plugin(definition({}), callback); 
+        }
         if(type === 'array'){
             i = 0;
             function done(){
